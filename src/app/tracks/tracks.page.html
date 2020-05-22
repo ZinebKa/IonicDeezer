@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Tracks</ion-title>
+  </ion-toolbar>
+ </ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let track of listeTracks">
+    <ion-button (click)="play(track.preview)">
+      <ion-icon name="play"></ion-icon>
+    </ion-button>
+    <ion-button (click)="pause()">
+      <ion-icon name="pause"></ion-icon>
+    </ion-button>
+    <b>{{track.title}}</b>
+  </ion-card>
+
+</ion-content>
